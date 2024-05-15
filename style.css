@@ -1,0 +1,284 @@
+:root{
+    --white-300: #FFFFFF; 
+    
+    --black-300: #1d1919;
+
+    --gray-300: #443e3e;
+
+    --blue-200: #00507F;
+    --blue-300: #2d7683;
+
+    --purple-200: #A369FF;
+    --purple-300: #8733FF;
+    --purple-500: #5A13B4;   
+
+    --yellow-200: #E2C431;
+        
+    --html:#e84a27;
+    --css: #2862ea;
+    
+    --cad: #d82424;
+    --python: linear-gradient(90deg, var(--css) 29%, var(--yellow-200) 93%);
+}
+
+/*toda pagina*/
+body{
+    background-color: var(--black-300);
+    margin: 0px;
+    padding: 0;
+}
+
+/*fundo cabeçalho*/
+.backgroudHeaderColor{
+    background-color: var(--blue-300);
+}
+
+/*agrupado o logo e os botões*/
+.containerHeader{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 10px 10px;
+}
+
+.logoSite{     
+    width: 120px;   
+    height: 120px;
+    margin-left: 20px;
+}
+
+/*botões do cabeçalho*/
+.buttonHeader{
+    background-color: var(--gray-300);
+    color: var(--white-300);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 35px;
+    gap: 20px;
+    transition: background-color 0.5s ease;
+}
+
+/*efeitos dos botões do cabeçalho*/
+.buttonHeader:hover{
+    background-color: var(--blue-300);
+    transition: background-color 0.5s ease;
+}
+
+#apresentacao{
+    display: flex;
+    align-content: stretch;
+    /* justify-content: space-evenly; */
+    gap: 15px;
+    align-items: center;
+}
+
+#apresentacao > div{
+    width: 750px;
+}
+
+#apresentacao > img{
+    width: 215px;
+    height: 250px;
+}
+
+.tituloBloco{
+    font-size: 2.5rem;
+    color: var(--white-300);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.containerPensa{
+    margin-right: 24px;
+    font-size: 1.4rem;
+    color: var(--white-300); 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;    
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+
+.paragrafoPens{
+    display: flex;    
+    flex-direction: column;
+    align-items: flex-end;    
+}
+
+.paragrafo{
+    font-size: 1.4rem;
+    color: var(--white-300);
+    text-align: justify;
+}
+
+.marginContainer{
+    margin: 1% 20%;
+}
+
+.skillsContainer{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding: 10px 48.7px;
+    border: 2px solid;
+    border-radius: 10px;    
+}
+
+.skill img{
+    width: 60px;
+}
+
+.skill h3{
+    color: var(--white-300);
+    text-align: center;
+    font-size: 1em;
+}
+
+.htmlColorBorder{
+    border-color: var(--html);
+}
+
+.cssColorBorder{
+    border-color: var(--css);
+}
+
+/* foi utilizado skil para as bordas coloquei abixo borda diferente*/
+.pythonColorBorder{    
+   border-image: var(--python);
+   border-image-slice: 1;   
+}
+
+.cadColorBorder{
+    border-color: var(--cad);
+}
+
+.wordPresColorBorder{
+    border-color: var(--blue-200);
+}
+
+.formularioContato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:3px solid var(--blue-300);
+    border-radius: 25px;
+    margin: 1% 30%; 
+    padding: 35px 0;
+    min-height: 250px;
+    gap: 30px;
+}
+
+.formularioContato input{
+    color:var(--white-300);
+    background: transparent;
+    border: none; 
+    border-bottom: 2px solid var(--white-300);
+    min-width: 260px;
+    font-size: 1.2rem;
+}
+
+.formularioContato input::placeholder{
+    color: var(--white-300);
+    font-size: 1.2rem;
+}
+
+.formularioContato textarea{
+    width: 360px;
+    height: 130px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    resize: none;
+    padding: 10px;
+}
+
+.formularioContato button{
+    border: none;
+}
+
+footer{
+    background-color: var(--blue-300);
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;    
+}
+
+footer div{
+    margin: 0 10%;
+    padding: 3% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    align-items: flex-end;
+}
+
+footer img{
+    max-width: 60px
+}
+
+footer a{
+    color: var(--white-300);
+    text-decoration: none;
+}
+
+/*Mensagem de Erro*/
+.escrevaMensagem{
+    display: none;
+}
+
+.mensagemVermelha{
+    color: red;
+}
+
+@media (max-width: 767px){
+    #apresentacao, .skillsContainer{
+        /* o flex-wrap forçou as imagens a se alinhar e ajustou a largura da imagen da imagem */
+       flex-wrap: wrap-reverse;
+       /* na .skillsContainer quero utilizar carrocel*/
+    }
+
+    .containerButtons{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buttonHeader{
+        font-size: 0.9rem;
+        margin: 10px 0;
+    }
+
+    .containerHeader{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 10%;
+    }
+
+    .container{
+        width: 62%;
+    }
+ 
+    .logoSite{
+        width: 80px;   
+        height: 80px;
+    }        
+
+    .formularioContato{
+        margin: 1% 30%;            
+    }
+}
+
